@@ -6,7 +6,7 @@ import ButtonPrimary from './ButtonPrimary';
 import ButtonSecondary from './ButtonSecondary';
 import { auth } from './firebase';
 import { useDispatch } from 'react-redux';
-import { login, signup } from './features/userSlice'
+import { login } from './features/userSlice'
 
 function SignUp() {
     const [email, setEmail] = useState("")
@@ -44,7 +44,7 @@ function SignUp() {
         <div className="signup">
             <div className="signup__header">
                 <div className="signup__logo">
-                    <Link>
+                    <Link to="/">
                         <img
                             className="header__logoImg"
                             src="https://assets.website-files.com/5e8fceb1c9af5c3915ec97a0/5ec2f037975ed372da9f6286_Tesla-Logo-PNG-HD.png"
@@ -62,7 +62,7 @@ function SignUp() {
                 <form className="signup__form">
                     <label htmlFor="fName">First Name</label>
                     <input type="text" id="fname" value={fName} onChange={(e) => setFName(e.target.value)} />
-                    <label htmlFor="lName">Email Address</label>
+                    <label htmlFor="lName">Last Name</label>
                     <input type="text" id="lName" value={lName} onChange={(e) => setLName(e.target.value)} />
                     <label htmlFor="email">Email Address</label>
                     <input type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} />
